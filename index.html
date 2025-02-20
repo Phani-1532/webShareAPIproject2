@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Share API</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Share the Files and Links</h1>
+        <h1>📤 Share Anything Easily</h1>
+        <p class="description">Use the buttons below to share links, images, or files seamlessly with Web Share API.</p>
         <hr>
-        <button type="button" onclick="shareLink()">Share Link</button>    <!--this is for share the link-->
-        <button type="button" onclick="shareFetch()">Share Fetch</button>  <!--this is for sharing the image using fetch and asynchronous in js-->
-        <input type="file" id="files">  <!--choosing the file in your device-->
-        <button type="button" onclick="shareImage()">Share Chosen File</button> <!--we can share the chosen file into your whatsapp or email-->
 
-        <h4>you can modify the images, please visit the code for make the image change</h4> <!--you can modify the images and url in js-->
+        <div class="all">
+            <div class="link">
+                <button type="button" onclick="shareLink()">🔗 Share a Link</button> 
+                <p>Click to share a link quickly with others.</p>
+            </div>  
+
+            <div class="imageLink">
+                <button type="button" onclick="shareFetch()">🖼️ Share an Image</button>
+                <p>Fetch and share an image asynchronously.</p>
+            </div> 
+
+            <div class="chooseFile">
+                <input type="file" id="files">  
+                <button type="button" onclick="shareImage()">📂 Share Chosen File</button> 
+                <p>Pick a file and share it via WhatsApp or email.</p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h4>✨ You can modify the images or links by editing the JavaScript code.</h4>
+        </div>
     </div>
-    
-    
 </body>
 </html>

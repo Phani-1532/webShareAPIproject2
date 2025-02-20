@@ -1,70 +1,156 @@
-*{
+/* Reset Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    font-family:'Times New Roman', Times, serif;
+/* Background Styling */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(pink,rgb(91, 91, 200));
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 20px;
 }
 
-.container h1{
-    font-size: 30px;
-    margin-bottom: 10px;
+/* Enhanced Container Styling */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.container h4{
+/* Title and Description */
+.container h1 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container h4 {
     font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: rgb(12, 144, 8);
+    color: #ddd;
+    margin-bottom: 15px;
 }
 
-.container{
-    width: 550px;
-    height: 350px;
-    background-color: #f2f2f2;
+/* Content Sections */
+.all {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.all div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
     border-radius: 10px;
-    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.container button{
-    background-color:blue;
+.all div:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.all button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    outline: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    position: relative;
-    left: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    gap: 10px;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.container button:hover{
-    background-color: darkblue;
+.all button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.05);
 }
 
-.container input{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+
+
+.all p{
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 10px;
-    font-size: 18px;
-    position: relative;
-    left: 10px;
 }
 
+/* Input Styling */
+.chooseFile input[type="file"] {
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Bottom Section */
+.bottom {
+    padding-top: 12px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: #fff;
+}
+
+.bottom h4 {
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 95%;
+        padding: 25px;
+    }
+
+    .all button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
