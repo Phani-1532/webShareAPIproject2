@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
     padding: 20px;
 }
@@ -91,9 +91,7 @@ body {
     transform: scale(1.05);
 }
 
-
-
-.all p{
+.all p {
     color: #333;
     font-size: 16px;
     font-weight: 500;
@@ -143,14 +141,64 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container {
-        max-width: 95%;
-        padding: 25px;
+        max-width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container h4 {
+        font-size: 16px;
     }
 
     .all button {
         font-size: 14px;
-        padding: 10px 20px;
+        padding: 10px 18px;
+    }
+
+    .chooseFile input[type="file"] {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        padding: 12px;
+    }
+
+    .container h1 {
+        font-size: 18px;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+
+
+    .container h4 {
+        font-size: 14px;
+    }
+
+    .all div {
+        padding: 12px;
+    }
+
+    .all button {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .chooseFile input[type="file"] {
+        width: 100%;
+        font-size: 13px;
+        padding: 8px;
     }
 }
